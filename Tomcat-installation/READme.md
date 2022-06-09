@@ -30,10 +30,12 @@ sudo tar -xvf apache-tomcat-9.0.62.tar.gz
 sudo rm apache-tomcat-9.0.62.tar.gz
 sudo mv apache-tomcat-9.0.62 tomcat9
 sudo chmod 777 -R /opt/tomcat9
+sudo chown ec2-user -R /opt/tomcat9
 sudo sh /opt/tomcat9/bin/startup.sh
 # create a soft link to start and stop tomcat
 sudo ln -s /opt/tomcat9/bin/startup.sh /usr/bin/starttomcat
 sudo ln -s /opt/tomcat9/bin/shutdown.sh /usr/bin/stoptomcat
+sudo yum update -y
 starttomcat
 ```
 
